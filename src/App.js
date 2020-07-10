@@ -7,7 +7,9 @@ import Boxes from './components/Boxes/Boxes';
 
 function App() {
 
-  return (
+
+
+  return ( // JSX
     <div className="App">
       <h1>Hello World!</h1>
       <Boxes />

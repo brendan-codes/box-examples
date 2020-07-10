@@ -3,7 +3,7 @@ import BoxDisplay from './BoxDisplay';
 import BoxForm from './BoxForm';
 
 const Boxes = (props) => {
-
+                                // [value, function]
     const [boxes, setBoxes] = useState([
         {
             "color": "red",

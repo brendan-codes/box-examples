@@ -12,7 +12,6 @@ const Form = ({example, setExample}) => {
     const formHandler = (e) => {
         e.preventDefault();
 
-        // console.log(exampleForm);
         setExample(exampleForm);
         setExampleForm("");
     }
