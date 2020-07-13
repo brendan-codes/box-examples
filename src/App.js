@@ -11,7 +11,7 @@ function App() {
 
   return ( // JSX
     <div className="App">
-      <h1>Hello World!</h1>
+      <h1>App Component</h1>
       <Boxes />
     </div>
   );

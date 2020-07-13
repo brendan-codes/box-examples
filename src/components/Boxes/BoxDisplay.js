@@ -1,17 +1,22 @@
 import React from 'react';
-const BoxDisplay = ({boxes}) => {
+import Box from './Box';
+const BoxDisplay = ({boxes, deleteHandler, colorChangeHandler}) => {
 
 
     return (
         <div>
+        <p>Box Display component</p>
         { boxes.map((val, i) =>
         // every element gets a key of the idx
-            <div key={i} style={val.style}>
-                <p>color: {val.color}</p>
-                <p>height: {val.height}</p>
+            <section key={i}>
+                <Box
+                    box={val}
+                    idx={i}
+                    deleteHandler={deleteHandler}
+                    colorChangeHandler={colorChangeHandler}
+                />
+            </section>
 
-                <button>Delete</button>
-            </div>
         )}
         </div>
     )

@@ -21,24 +21,23 @@ const BoxForm = ({boxes, setBoxes}) => {
         e.preventDefault();
 
         // alt creating duplicate array
-        let newBoxes = [];
-        boxes.forEach((value) => {
-            newBoxes.push(value);
-        })
-        newBoxes.push({
-            "color": color,
-            "height": height,
-            "style": {
-                "display": "inline-block",
-                "background": color,
-                "height": `${height}px`
-            }
-        })
+        // let newBoxes = [];
+        // boxes.forEach((value) => {
+        //     newBoxes.push(value);
+        // })
+        // newBoxes.push({
+        //     "color": color,
+        //     "height": height,
+        //     "style": {
+        //         "display": "inline-block",
+        //         "background": color,
+        //         "height": `${height}px`
+        //     }
+        // })
 
         // how do i copy an array in javascript
         // how do i copy an object in javascript
-        let newBoxes2 = [].concat(...boxes);
-
+        // let newBoxes2 = [].concat(...boxes);
 
         // create a new array of boxes, including all the previous values plus the new one
         setBoxes([...boxes,{
@@ -59,9 +58,13 @@ const BoxForm = ({boxes, setBoxes}) => {
     // jsx
     return (
         <div>
+            <p>Box Form Component:</p>
             <form onSubmit={formHandler}>
+                <p>Color:</p>
                 <input type="text" value={color} onChange={(e) => {setColor(e.target.value)}}></input>
+                <p>Height:</p>
                 <input type="text" value={height} onChange={heightHandler}></input>
+                <br />
                 <input type="submit" value="click me!"></input>
             </form>
         </div>
